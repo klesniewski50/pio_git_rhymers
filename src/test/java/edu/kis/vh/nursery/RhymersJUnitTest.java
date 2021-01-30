@@ -75,4 +75,19 @@ public class RhymersJUnitTest {
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
 
+	@Test
+	public void testReportRejected() {
+		final int INPUT_INDEX = 0;
+		final int EXPECTED_OUTPUT_INDEX = 1;
+		final int[][] TEST_VALUES_ARRAY = {{15, 13, 14, 13, 20}, {0, 0, 1, 1, 2}};
+		final int TEST_VALUES_ARRAY_SIZE = 5;
+
+		HanoiRhymer hanoiRhymer = new HanoiRhymer();
+
+		for(int i = 0; i < TEST_VALUES_ARRAY_SIZE; i++) {
+			hanoiRhymer.countIn(TEST_VALUES_ARRAY[INPUT_INDEX][i]);
+			Assert.assertEquals(hanoiRhymer.reportRejected(), TEST_VALUES_ARRAY[EXPECTED_OUTPUT_INDEX][i]);
+		}
+	}
+
 }
