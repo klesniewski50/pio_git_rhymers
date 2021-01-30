@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class defaultCountingOutRhymer {
+public class defaultCountingOutRhymer { //TODO: zmienić nazwę klasy
 
 
 	public static final int SIZE = 12;
